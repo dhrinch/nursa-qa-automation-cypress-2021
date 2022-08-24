@@ -10,6 +10,10 @@ class MainPage {
         return cy.get('header > .ui.menu > :nth-child(1)');
     }
 
+    dropdownTeesMen(){
+        return cy.get('a[href="/en_US/taxons/t-shirts/men"]');
+    }
+
     navigate() {
         cy.visit(url);
     }
@@ -32,6 +36,16 @@ class MainPage {
     clickCategoryDropdownTees(){
         this.categoryDropdownTees()
             .click();
+    }
+
+    clickDropdownTeesMen(){
+        this.dropdownTeesMen()
+            .click();
+    }
+
+    selectMenTees(){
+        this.clickCategoryDropdownTees();
+        this.clickDropdownTeesMen();
     }
 }
 export default MainPage

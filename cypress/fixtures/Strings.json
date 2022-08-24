@@ -1,5 +1,14 @@
 {
-    "CategoryMenTShirt": "t-shirts/men",
+    "categoryMenTShirtAddress": "/taxons/t-shirts/men",
+    "productMenGreyRaglanTeeAddress":"/products/raglan-grey-black-tee",
+    "cartAddress":"/cart",
     "raglanTee":"Raglan grey & black Tee",
+    "email":"shop@example.com",
+    "name":"John",
+    "lastName":"Doe",
+    "streetAddress":"123 Main Street",
+    "city":"Anytown",
+    "country":"AU",
+    "postalCode":"12345",
     "resetPasswordPageTitle":"Reset your password"
 }

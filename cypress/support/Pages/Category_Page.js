@@ -1,15 +1,17 @@
+const url = Cypress.config('baseUrl');
+
 class CategoryPage {
 
-    addToCartButton()   {
-        return cy.get('button[type=submit]');
-    }
-
-    navigate(category) {
-        cy.visit(url+'/taxon'+category);
+    clothingItem(productName){
+        return cy.get(`a:contains(${productName})`);
     }
     
-    addToCart(){
-        addToCartButton()
+    navigate(categoryUrl) {
+        cy.visit(url+categoryUrl);
+    }
+
+    selectClothingItem(productName){
+        this.clothingItem(productName)
             .click();
     }
 }
