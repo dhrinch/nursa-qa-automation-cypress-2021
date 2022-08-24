@@ -10,7 +10,7 @@ class CartPage {
         return cy.get('.five > .huge');
     }
 
-    checkouEmailField(){
+    checkoutEmailField(){
         return cy.get('#sylius_checkout_address_customer_email');
     }
 
@@ -69,7 +69,7 @@ class CartPage {
     }
 
     typeCheckoutEmail(email){
-        this.checkouEmailField()
+        this.checkoutEmailField()
         .clear()    
         .type(`${email}`);
     }
@@ -112,6 +112,17 @@ class CartPage {
     clickNextButton(){
         this.checkoutNextButton()
             .click();
+    }
+
+    checkoutFillDetails(email, name, lastName, street, city, country, zip){
+        this.typeCheckoutEmail(email);
+        this.typeCheckoutName(name);
+        this.typeCheckoutLastName(lastName);
+        this.typeCheckoutStreet(street);
+        this.typeCheckoutCity(city);
+        this.selectCheckoutCountry(country);
+        this.typeCheckoutZIP(zip);
+        this.clickNextButton();
     }
 
     clickPlaceOrder(){

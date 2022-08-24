@@ -1,6 +1,10 @@
 const url = Cypress.config('baseUrl');
 
 class LoginPage {
+    signupConfirmation(){
+        return cy.get('.pusher > :nth-child(2) > :nth-child(2)')
+    }
+    
     usernameInput(){
         return cy.get('[id = "_username"]');
     }

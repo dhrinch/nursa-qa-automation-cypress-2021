@@ -31,14 +31,13 @@ describe('Test buying product', () => {
         product.addToCart();
         cart.productName().should('contain', this.strings.raglanTee);
         cart.checkoutClick();
-        cart.typeCheckoutEmail(this.strings.email);
-        cart.typeCheckoutName(this.strings.name);
-        cart.typeCheckoutLastName(this.strings.lastName);
-        cart.typeCheckoutStreet(this.strings.streetAddress);
-        cart.selectCheckoutCountry(this.strings.country);
-        cart.typeCheckoutCity(this.strings.city);
-        cart.typeCheckoutZIP(this.strings.postalCode);
-        cart.clickNextButton();
+        cart.checkoutFillDetails(this.strings.email,
+                                 this.strings.name,
+                                 this.strings.lastName,
+                                 this.strings.streetAddress,
+                                 this.strings.city,
+                                 this.strings.country,
+                                 this.strings.zip);
         cart.clickNextButton();
         cart.clickNextButton();
         cart.clickPlaceOrder();

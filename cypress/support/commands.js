@@ -38,3 +38,19 @@ Cypress.Commands.add('logIn', (email, password) => {
     cy.get('button[type = "submit"]')
         .click();
 })
+
+Cypress.Commands.add("fillEmail", ()=> {
+    function makeid(length) {
+      var result           = '';
+      var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var charactersLength = characters.length;
+      for ( var i = 0; i < length; i++ ) {
+         result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+      return result;
+   }
+   
+   console.log(makeid(5));
+  cy.get('#sylius_customer_registration_email')
+    .type(makeid(6) + "@test.com");
+})

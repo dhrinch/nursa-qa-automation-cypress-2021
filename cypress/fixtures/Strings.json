@@ -9,6 +9,11 @@
     "streetAddress":"123 Main Street",
     "city":"Anytown",
     "country":"AU",
-    "postalCode":"12345",
-    "resetPasswordPageTitle":"Reset your password"
+    "zip":"12345",
+    "resetPasswordPageTitle":"Reset your password",
+    "signupName":"Jane",
+    "signupLastName":"Doe",
+    "signupEmail":"test@mailinator.com",
+    "signupPassword":"test12345678",
+    "registrationSuccess":"Thank you for registering."
 }
