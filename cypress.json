@@ -1,17 +1,11 @@
 {
     "baseUrl": "https://demo.sylius.com/en_US",
-    "$schema": "https://on.cypress.io/cypress.schema.json",
     "video" : false,
     "chromeWebSecurity" : false,
     "blockHosts" : [
-        "*google-analytics.com",
-        "*doubleclick.net"
+        "*.google-analytics.com",
+        "*.doubleclick.net"
     ],
-
-    "retries": {
-        "runMode": 2,
-        "openMode": 0
-    },
 
     "env" : {
         "credentials" : {
@@ -19,7 +13,6 @@
             "correctPassword" : "sylius",
             "nonExistingEmail" : "some@email.com",
             "nonExistingPassword" : "some@password",
-            "nonMatchingPassword" : "some@password1",
             "invalidEmailFormat" : "invalidEmail"
         }
     }

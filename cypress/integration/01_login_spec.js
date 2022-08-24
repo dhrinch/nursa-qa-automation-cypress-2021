@@ -38,6 +38,6 @@ describe('Test login page', () => {
         cy.logIn(Cypress.env('credentials').correctEmail, 
                  Cypress.env('credentials').correctPassword);
         const main = new MainPage();
-                 main.logoutButton().should('be.visible');
+        main.logoutButton().should('be.visible');
     });
 });

@@ -4,6 +4,10 @@ class LoginPage {
     signupConfirmation(){
         return cy.get('.pusher > :nth-child(2) > :nth-child(2)')
     }
+
+    passwordResetConfirmation(){
+        return cy.get('.positive');
+    }
     
     usernameInput(){
         return cy.get('[id = "_username"]');
@@ -19,10 +23,6 @@ class LoginPage {
 
     forgotPasswordButton() {
         return cy.get('.loadable > .right');
-    }
-
-    rememberMeCheckbox() {
-        return cy.get('.ui > label');
     }
 
     errorMessage() {

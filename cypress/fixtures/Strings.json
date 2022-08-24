@@ -11,9 +11,15 @@
     "country":"AU",
     "zip":"12345",
     "resetPasswordPageTitle":"Reset your password",
+    "passwordResetSuccess":"If the email you have specified exists in our system, we have sent there an instruction on how to reset your password.",
     "signupName":"Jane",
     "signupLastName":"Doe",
     "signupEmail":"test@mailinator.com",
     "signupPassword":"test12345678",
-    "registrationSuccess":"Thank you for registering."
+    "registrationSuccess":"Thank you for registering.",
+    "shortPassword":"ab",
+    "shortName":"a",
+    "shortLastName":"a",
+    "invalidEmailFormat" : "invalidEmail",
+    "nonMatchingPassword" : "nonMatchingPassword"
 }

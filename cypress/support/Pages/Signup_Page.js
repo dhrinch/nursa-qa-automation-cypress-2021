@@ -21,6 +21,22 @@ class SignupPage {
     confirmPasswordField(){
         return cy.get('#sylius_customer_registration_user_plainPassword_second');
     }
+    
+    namemErrorPin(){
+        return cy.get('.sylius-validation-error');
+    }
+
+    lastNameErrorPin(){
+        return cy.get('.sylius-validation-error');
+    }
+
+    emailErrorPin() {
+        return cy.get('.sylius-validation-error')
+    }
+
+    passwordErrorPin() {
+        return cy.get('.sylius-validation-error');
+    }
 
     signupButton(){
         return cy.get('button[type="submit"]');
@@ -30,13 +46,48 @@ class SignupPage {
         cy.visit(url+'/register');
     }
 
-    signup(firstName, lastName, password) {
-        this.firstNameField().type(`${firstName}`);
-        this.lastNameField().type(`${lastName}`);
+    enterName(firstName) {
+        this.firstNameField()
+            .clear()
+            .type(`${firstName}`);
+    }
+
+    enterLastName(lastName) {
+        this.lastNameField()
+            .clear()
+            .type(`${lastName}`);
+    }
+
+    enterEmail(email) {
+        this.emailField()
+            .clear()
+            .type(`${email}`);
+    }
+
+    enterPassword(password) {
+        this.passwordField()
+            .clear()
+            .type(`${password}`);
+    }
+
+    enterConfirmPassword(password) {
+        this.confirmPasswordField()
+            .clear()
+            .type(`${password}`);
+    }
+
+    clickSignupButton() {
+        this.signupButton()
+            .click();
+    }
+
+    fillSignupDetails(firstName, lastName, password) {
+        this.enterName(firstName);
+        this.enterLastName(lastName);
         cy.fillEmail();
-        this.passwordField().type(`${password}`);
-        this.confirmPasswordField().type(`${password}`);
-        this.signupButton().click();
+        this.enterPassword(password);
+        this.enterConfirmPassword(password);
+        this.clickSignupButton();
     }
 }
 export default SignupPage
