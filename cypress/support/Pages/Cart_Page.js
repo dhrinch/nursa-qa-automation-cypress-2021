@@ -54,10 +54,6 @@ class CartPage {
         cy.visit(url+cartUrl);
     }
     
-    selectSize(size){
-        cy.get('select[name="group_1"]').select(size)
-    }
-    
     addToCart(){
         this.addToCartButton()
             .click();
